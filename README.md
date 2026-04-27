@@ -1,5 +1,6 @@
-# Hotel Elite - Management System
+# Hotel Radison - Management System
 This is a modern front-end design for a Hotel Management System.
+We Provide best services.
 
 ### Features:
 - Responsive Home Page
