@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* পাশাপাশি বসানোর মূল ম্যাজিক এখানে */
+.rooms-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* ৩টি কার্ডের পর জায়গা না থাকলে অটো নিচে যাবে */
+    gap: 20px;
+    /* কার্ডগুলোর মাঝখানের গ্যাপ */
+    justify-content: flex-start;
+    /* বাম থেকে শুরু হবে */
+}
+
+/* প্রতিটি কার্ডের ডিজাইন */
+.room-box {
+    background: #fff;
+    width: calc(33.33% - 14px);
+    /* এক লাইনে ৩টি রাখার ক্যালকুলেশন */
+    border-radius: 20px;
+    /* চারপাশ সুন্দর রাউন্ড */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.room-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-details {
+    padding: 20px;
+}
+
+.room-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.room-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* বাটন ডিজাইন */
+.book-btn {
+    padding: 8px 18px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background: #ff8c00;
+    color: #fff;
+    border-color: #ff8c00;
+}
+
+/* মোবাইল ও ট্যাবলেটের জন্য রেসপনসিভ */
+@media (max-width: 992px) {
+    .room-box {
+        width: calc(50% - 10px);
+        /* ট্যাবলেটে ২টি কার্ড */
+    }
+}
+
+@media (max-width: 600px) {
+    .room-box {
+        width: 100%;
+        /* মোবাইলে ১টি কার্ড */
+    }
+}
